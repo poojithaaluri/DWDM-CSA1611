@@ -1,0 +1,7 @@
+m <- mtcars
+plot(m$mpg,type="l",xlab="Index",ylab="Value")
+lines(m$disp)
+lines(m$hp)
+lines(m$wt)
+legend("topright",c("mpg","disp","hp","wt"),
+       lty=1)
