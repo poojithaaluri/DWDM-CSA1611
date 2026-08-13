@@ -1,0 +1,11 @@
+library(HSAUR3)
+data(water)
+
+plot(water$hardness,water$mortality,
+     xlab="Hardness",ylab="Mortality")
+
+model <- lm(mortality~hardness,data=water)
+abline(model)
+
+summary(model)
+predict(model,data.frame(hardness=88))
