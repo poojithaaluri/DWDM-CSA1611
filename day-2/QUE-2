@@ -1,0 +1,15 @@
+x <- c(1,1,5,5,5,5,8,8,8,10,10,10,10,12,14,14,14,
+15,15,15,15,15,18,18,18,18,18,18,20,20,20,20,20,
+21,21,21,21,25,25,25,25,25,28,28,30)
+
+bins <- split(x, ceiling(seq_along(x)/3))
+bins
+
+# Bin mean smoothing
+lapply(bins, function(b) rep(mean(b),length(b)))
+
+# Boundary smoothing
+lapply(bins, function(b) c(rep(min(b),which.min(abs(b-min(b)))),
+                           rep(max(b),which.max(abs(b-max(b))))))
+
+hist(x, breaks="Sturges", main="Histogram", xlab="Price")
