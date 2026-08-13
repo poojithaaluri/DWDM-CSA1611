@@ -1,0 +1,5 @@
+x <- as.vector(AirPassengers)
+
+hist(x, breaks=seq(100,700,150),
+     main="AirPassengers Histogram",
+     xlab="Passengers")
