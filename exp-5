@@ -1,0 +1,4 @@
+using weka
+create file in csv
+using apriori 
+using fg growth
