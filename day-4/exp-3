@@ -1,0 +1,6 @@
+open weka 
+enter the data in ms excel
+go weka 
+open the file
+go to classify
+run the implementation
